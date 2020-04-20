@@ -21,7 +21,7 @@ public class gold : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.ag == "Player")
+        if(collision.tag == "Player")
         {
             mm.goldCount += 1;
             this.gameObject.SetActive(false);

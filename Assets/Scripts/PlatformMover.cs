@@ -17,6 +17,14 @@ public class PlatformMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // if(moveLeft == true){
+       //     rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
+       // }
+       // else
+       // {
+       //    rb2d.velocity = new Vector2(-moveSpeed, rb2d.velocity.y);
+       // }
         rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
+
     }
 }

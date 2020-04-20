@@ -105,9 +105,10 @@ public class PlayerController : MonoBehaviour {
         {
             transform.Translate((Input.acceleration.x/2), 0, 0);
 
-            if (isGrounded)
+            if (isGrounded && myRigidBody.velocity.y <= 0)
             {
-                myRigidBody.AddForce(transform.up * jumpPower);
+                //myRigidBody.AddForce(transform.up * jumpPower);
+                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpPower);
                 
             }
 

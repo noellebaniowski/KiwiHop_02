@@ -46,7 +46,7 @@ public class LevelEnd1 : MonoBehaviour
 			thePlayer.myRigidBody.velocity = new Vector3(thePlayer.moveSpeed, thePlayer.myRigidBody.velocity.y, 0f);
 		}
 
-		if (score >= 5 && levelOver == false)
+		if (score >= 20 && levelOver == false)
 		{
 			levelOver = true;
 			StartCoroutine("LevelEndCo");
@@ -78,11 +78,11 @@ public class LevelEnd1 : MonoBehaviour
 		theCamera.followTarget = false;
 		//pauseScreen.SetActive (false);
 		theLevelManager.invincible = true;
-		thePlayer.myRigidBody.velocity = Vector3.zero;
+		//thePlayer.myRigidBody.velocity = Vector3.zero;
 
 		//PlayerPrefs.SetInt ("CoinCount", theLevelManager.coinCount);
 		//PlayerPrefs.SetInt ("PlayerLives", theLevelManager.currentLives);
-		PlayerPrefs.SetInt("GB", 2);
+		//PlayerPrefs.SetInt("GB", 2);
 
 		theLevelManager.levelMusic.Stop();
 		theLevelManager.gameOverMusic.Play();
