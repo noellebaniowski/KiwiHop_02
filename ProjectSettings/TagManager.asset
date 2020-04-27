@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - FP
   - PlayerB
+  - Stomp
   layers:
   - Default
   - TransparentFX

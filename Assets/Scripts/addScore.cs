@@ -34,5 +34,16 @@ public class addScore : MonoBehaviour
             this.gameObject.SetActive(false);
 
         }
+
+        if (collision.tag == "Stomp")
+        {
+
+            LE.score += 1;
+
+
+
+            this.gameObject.SetActive(false);
+
+        }
     }
 }

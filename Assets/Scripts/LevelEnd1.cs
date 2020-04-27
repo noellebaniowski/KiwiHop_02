@@ -20,6 +20,7 @@ public class LevelEnd1 : MonoBehaviour
 	public bool tutorial;
 
 	public int score;
+	public int scoretoBeat;
 	public bool levelOver;
 
 	// Use this for initialization
@@ -46,7 +47,7 @@ public class LevelEnd1 : MonoBehaviour
 			thePlayer.myRigidBody.velocity = new Vector3(thePlayer.moveSpeed, thePlayer.myRigidBody.velocity.y, 0f);
 		}
 
-		if (score >= 20 && levelOver == false)
+		if (score >= scoretoBeat && levelOver == false)
 		{
 			levelOver = true;
 			StartCoroutine("LevelEndCo");
