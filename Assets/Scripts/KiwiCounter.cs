@@ -28,7 +28,7 @@ public class KiwiCounter : MonoBehaviour {
         if (collision.GetComponent<Kiwi>())
         {
             moneyAmount += 1;
-            Destroy(collision.gameObject);
+          //  Destroy(collision.gameObject);
     
         }
     }

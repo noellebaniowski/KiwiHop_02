@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour {
 
     public float xMaxDisplacement;
     public GameObject killplane;
+    public bool paused;
 
 
 	// Use this for initialization
@@ -103,6 +104,12 @@ public class PlayerController : MonoBehaviour {
 
         if (doodle)
         {
+
+            if(paused == false)
+            {
+                transform.Translate((Input.acceleration.x / 2), 0, 0);
+            }
+
             transform.Translate((Input.acceleration.x/2), 0, 0);
 
             if (isGrounded && myRigidBody.velocity.y <= 0)

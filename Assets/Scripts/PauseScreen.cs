@@ -44,6 +44,7 @@ public class PauseScreen : MonoBehaviour {
 	public void PauseGame()
 	{
 		Time.timeScale = 0;
+		thePlayer.paused = true;
 		thePauseScreen.SetActive (true);
 		thePlayer.canMove = false;
 		theLevelManager.levelMusic.Pause ();
@@ -53,6 +54,7 @@ public class PauseScreen : MonoBehaviour {
 	public void ResumeGame ()
 	{
 		Time.timeScale = 1;
+		thePlayer.paused = false;
 		thePauseScreen.SetActive (false);
 		thePlayer.canMove = true;
 		theLevelManager.levelMusic.Play ();

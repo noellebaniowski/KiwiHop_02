@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class addScore : MonoBehaviour
 {
     public int score;
+    public AudioSource kiwiSound;
     
 
     public LevelEnd1 LE;
@@ -14,6 +15,7 @@ public class addScore : MonoBehaviour
     {
         
         LE = GameObject.FindObjectOfType<LevelEnd1>();
+        kiwiSound = GameObject.FindGameObjectWithTag("Kiwi").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,8 +30,8 @@ public class addScore : MonoBehaviour
         {
 
             LE.score += 1;
-            
-            
+
+            kiwiSound.Play();
             
             this.gameObject.SetActive(false);
 
@@ -40,7 +42,7 @@ public class addScore : MonoBehaviour
 
             LE.score += 1;
 
-
+            kiwiSound.Play();
 
             this.gameObject.SetActive(false);
 
