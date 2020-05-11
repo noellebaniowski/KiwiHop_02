@@ -20,8 +20,8 @@ public class CameraController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        target = P1;
-        switched = false;
+        //target = P1;
+        //switched = false;
 		followTarget = true;
         StartCoroutine("FindPlayer");
 	}
@@ -41,9 +41,9 @@ public class CameraController : MonoBehaviour {
 			targetPosition = new Vector3 (transform.position.x, target.transform.position.y, transform.position.z);
 
 			if (target.transform.localScale.x > 0f) {
-				targetPosition = new Vector3 (targetPosition.x + followAhead, targetPosition.y, targetPosition.z);
+				targetPosition = new Vector3 (targetPosition.x , targetPosition.y + followAhead, targetPosition.z);
 			} else {
-				targetPosition = new Vector3 (targetPosition.x - followAhead, targetPosition.y, targetPosition.z);
+				targetPosition = new Vector3 (targetPosition.x , targetPosition.y - followAhead, targetPosition.z);
 			}
 
 			//transform.position = targetPosition;
@@ -51,19 +51,19 @@ public class CameraController : MonoBehaviour {
 			transform.position = Vector3.Lerp (transform.position, targetPosition, smoothing * Time.deltaTime);
 		}
 
-        if (switched == false)
-        {
-            target = P1;
-            PC1.enabled = true;
-            PC2.enabled = false;
-        }
-
-        if (switched == true)
-        {
-            target = P2;
-            PC1.enabled = false;
-            PC2.enabled = true;
-        }
+        //if (switched == false)
+        //{
+        //    target = P1;
+        //    PC1.enabled = true;
+        //    PC2.enabled = false;
+        //}
+        //
+        //if (switched == true)
+        //{
+        //    target = P2;
+        //    PC1.enabled = false;
+        //    PC2.enabled = true;
+        //}
 
     }
 

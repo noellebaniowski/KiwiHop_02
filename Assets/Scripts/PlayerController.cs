@@ -105,10 +105,7 @@ public class PlayerController : MonoBehaviour {
         if (doodle)
         {
 
-            if(paused == false)
-            {
-                transform.Translate((Input.acceleration.x / 2), 0, 0);
-            }
+            
 
             transform.Translate((Input.acceleration.x/2), 0, 0);
 
@@ -404,7 +401,13 @@ public class PlayerController : MonoBehaviour {
     //WE WILL ADD THIS NEW
     void FixedUpdate()
     {
-        if( moreGravity == true)
+
+        if (paused == false)
+        {
+            transform.Translate((Input.acceleration.x / 4), 0, 0);
+        }
+
+        if ( moreGravity == true)
         {
             Physics2D.gravity = new Vector2(0, -19.8f);
         }
@@ -458,6 +461,7 @@ public class PlayerController : MonoBehaviour {
 			//transform.position = respawnPosition;
 			if (theLevelManager.respawning == false) {
 				theLevelManager.Respawn ();
+
 			}
 		}
 

@@ -19,7 +19,8 @@ public class ShopButton : MonoBehaviour
     }
 
     public void changemenuscene(string scenename) 
-    { 
-        Application.LoadLevel(scenename); 
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(scenename); 
     }
 }

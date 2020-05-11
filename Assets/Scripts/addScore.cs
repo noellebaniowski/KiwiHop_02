@@ -28,21 +28,21 @@ public class addScore : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-
+            
             LE.score += 1;
 
             kiwiSound.Play();
-            
+
             this.gameObject.SetActive(false);
 
         }
 
         if (collision.tag == "Stomp")
         {
-
             LE.score += 1;
 
             kiwiSound.Play();
+
 
             this.gameObject.SetActive(false);
 

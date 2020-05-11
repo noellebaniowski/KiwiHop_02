@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5065446912113375705}
   m_Layer: 0
   m_Name: REAL KIWI
-  m_TagString: Untagged
+  m_TagString: Kiwi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 1
-  kiwiSound: {fileID: 0}
+  kiwiSound: {fileID: 1123996196298284960, guid: 47c8ad0791c472a4f987ad1aad9f5d87,
+    type: 3}
   LE: {fileID: 0}
 --- !u!114 &5065446912113375705
 MonoBehaviour:

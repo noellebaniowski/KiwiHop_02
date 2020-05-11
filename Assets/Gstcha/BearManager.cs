@@ -34,7 +34,7 @@ public class BearManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        CoinText.text = "Coins:" + coins;
+        CoinText.text = "Kiwis:" + coins;
 
         if (reset == true)
         {
@@ -48,7 +48,7 @@ public class BearManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        CoinText.text = "Coins:" + coins;
+        CoinText.text = "Kiwis:" + coins;
 
         if (coins < 25 && !spinning)
         {

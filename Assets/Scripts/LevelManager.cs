@@ -49,6 +49,7 @@ public class LevelManager : MonoBehaviour {
 	//public AudioSource coinSound;
 	public AudioSource levelMusic;
 	public AudioSource gameOverMusic;
+	public GameObject killplane;
     //
 	//public GameObject pauseScreen;
 
@@ -144,12 +145,18 @@ public class LevelManager : MonoBehaviour {
 
         yield return new WaitForSeconds (waitToRespawn);
 
+		thePlayer.transform.position = thePlayer.respawnPosition;
+
+		Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+		pos.x = Mathf.Clamp01(pos.x);
+		pos.y = Mathf.Clamp01(pos.y) - 1f;
+		killplane.transform.position = Camera.main.ViewportToWorldPoint(pos);
+
 		healthCount = maxHealth;
 		respawning = false;
 		UpdateHeartMeter ();
 		//coinCount = 0;
 		//coinText.text = "Stars:" + coinCount;
-		thePlayer.transform.position = thePlayer.respawnPosition;
        // thePlayer2.transform.position = p2respawn.transform.position;
 
         thePlayer.enabled = true;
